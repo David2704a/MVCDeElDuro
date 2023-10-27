@@ -24,6 +24,8 @@ class TareasActivity : AppCompatActivity() {
         val agregarButton = findViewById<Button>(R.id.agregarButton)
         val descripcionEditText = findViewById<EditText>(R.id.descripcionEditText)
 
+        tareasAdapter.setTareasController(tareasController)
+
         agregarButton.setOnClickListener {
             val descripcion = descripcionEditText.text.toString()
             if (descripcion.isNotEmpty()) {
